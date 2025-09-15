@@ -5,45 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora de Consumo de Energía</title>
   <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <h1>Calculadora de Consumo de Energía</h1>
-  <div class="card">
-    <p>Ingresa la cantidad, potencia y horas de uso de cada aparato:</p>
+  <header>
+    <h1>🔌 Calculadora de Consumo de Energía</h1>
+    <p>Aprende cuánta energía consumen tus aparatos y recibe consejos para ahorrar.</p>
+  </header>
 
+  <section class="info-section">
+    <h2>📊 Consumo promedio de aparatos</h2>
+    <canvas id="graficaPromedios"></canvas>
+    <p class="info">
+      Un <strong>Watt (W)</strong> es la cantidad de energía que consume un aparato por segundo.  
+      Para calcular kWh: <strong>(Watts × horas de uso ÷ 1000)</strong>.  
+      Ejemplo: un foco de 60W encendido 5h gasta 0.3 kWh.
+    </p>
+  </section>
+
+  <section class="calculator">
+    <h2>🔢 Ingresa el consumo de tus aparatos</h2>
     <div class="appliance">
-      <label>Focos</label>
-      <input type="number" id="focos" placeholder="Cantidad" min="0">
-      <input type="number" id="focosPotencia" placeholder="Potencia (W)" min="0">
-      <input type="number" id="focosHoras" placeholder="Horas/día" min="0">
+      <label>Televisor (W):</label>
+      <input type="number" id="tv" placeholder="Ej. 100">
     </div>
-
     <div class="appliance">
-      <label>Televisores</label>
-      <input type="number" id="tvs" placeholder="Cantidad" min="0">
-      <input type="number" id="tvsPotencia" placeholder="Potencia (W)" min="0">
-      <input type="number" id="tvsHoras" placeholder="Horas/día" min="0">
+      <label>Refrigerador (W):</label>
+      <input type="number" id="refri" placeholder="Ej. 150">
     </div>
-
     <div class="appliance">
-      <label>Refrigerador</label>
-      <input type="number" id="refri" placeholder="Cantidad" min="0">
-      <input type="number" id="refriPotencia" placeholder="Potencia (W)" min="0">
-      <input type="number" id="refriHoras" placeholder="Horas/día" min="0">
+      <label>Microondas (W):</label>
+      <input type="number" id="micro" placeholder="Ej. 1200">
     </div>
-
     <div class="appliance">
-      <label>Microondas</label>
-      <input type="number" id="micro" placeholder="Cantidad" min="0">
-      <input type="number" id="microPotencia" placeholder="Potencia (W)" min="0">
-      <input type="number" id="microHoras" placeholder="Horas/día" min="0">
+      <label>Clima (W):</label>
+      <input type="number" id="clima" placeholder="Ej. 1000">
     </div>
+    <div class="appliance">
+      <label>Horas de uso total por día:</label>
+      <input type="number" id="horas" placeholder="Ej. 5">
+    </div>
+    <button onclick="calcularConsumo()">Calcular Consumo</button>
+  </section>
 
-    <button onclick="calcular()">Calcular Consumo Total</button>
-
-    <div id="resultado"></div>
-    <div id="tips"></div>
-  </div>
+  <section class="results">
+    <h2>📈 Resultados</h2>
+    <p id="resultado"></p>
+    <canvas id="graficaResultados"></canvas>
+    <div id="consejos"></div>
+  </section>
 
   <script src="script.js"></script>
 </body>

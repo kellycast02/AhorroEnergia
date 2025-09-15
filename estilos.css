@@ -1,93 +1,69 @@
-/* Mantengo el estilo anterior que hicimos */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #eafaf1, #d4f5e3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f4fdf4;
+  color: #222;
   margin: 0;
-  padding: 20px;
-  color: #2c3e50;
+  padding: 0;
 }
 
-h1 {
-  color: #1b4332;
+header {
+  background-color: #2e7d32;
+  color: white;
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 2rem;
+  padding: 1.5rem;
+  border-bottom: 4px solid #1b5e20;
 }
 
-.card {
-  background-color: #ffffff;
-  padding: 25px 20px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  max-width: 450px;
-  width: 100%;
+h1, h2 {
+  margin: 0.5rem 0;
+}
+
+.info-section, .calculator, .results {
+  background: white;
+  max-width: 700px;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .appliance {
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  font-weight: 600;
-  margin-bottom: 4px;
-  color: #2d6a4f;
+  margin-bottom: 1rem;
 }
 
 input {
-  padding: 10px;
-  margin-bottom: 5px;
-  border-radius: 10px;
-  border: 1.5px solid #b7e4c7;
-  outline: none;
-}
-
-input:focus {
-  border-color: #40916c;
-  box-shadow: 0 0 5px rgba(64, 145, 108, 0.5);
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 button {
-  background: linear-gradient(135deg, #2d6a4f, #40916c);
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-  border: none;
-  padding: 12px;
-  margin-top: 15px;
+  display: block;
   width: 100%;
-  border-radius: 12px;
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(64, 145, 108, 0.4);
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background: linear-gradient(135deg, #40916c, #52b788);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(64, 145, 108, 0.5);
+  background-color: #388e3c;
 }
 
 #resultado {
-  margin-top: 15px;
-  font-size: 1.1em;
   font-weight: bold;
-  text-align: center;
-  color: #1b4332;
+  margin: 1rem 0;
 }
 
-.tip {
-  margin-top: 12px;
-  background-color: #e9f8f1;
-  padding: 12px;
-  border-radius: 10px;
-  font-size: 0.95em;
-  border-left: 5px solid #40916c;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+#consejos {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #e8f5e9;
+  border-radius: 8px;
+  font-size: 0.95rem;
 }
