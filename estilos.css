@@ -1,4 +1,4 @@
-/* Fuente moderna y diseño limpio */
+/* Mantengo el estilo anterior que hicimos */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #eafaf1, #d4f5e3);
@@ -7,7 +7,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  margin: 0; 
+  margin: 0;
   padding: 20px;
   color: #2c3e50;
 }
@@ -19,38 +19,33 @@ h1 {
   font-size: 2rem;
 }
 
-/* Tarjeta central con sombras y bordes más suaves */
 .card {
   background-color: #ffffff;
   padding: 25px 20px;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  max-width: 420px;
+  max-width: 450px;
   width: 100%;
-  transition: transform 0.2s ease-in-out;
 }
 
-.card:hover {
-  transform: translateY(-3px);
+.appliance {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
   font-weight: 600;
-  margin-top: 12px;
-  display: block;
+  margin-bottom: 4px;
   color: #2d6a4f;
 }
 
-/* Inputs con borde y focus destacado */
 input {
-  width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  margin-bottom: 8px;
+  padding: 10px;
+  margin-bottom: 5px;
   border-radius: 10px;
   border: 1.5px solid #b7e4c7;
   outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus {
@@ -58,7 +53,6 @@ input:focus {
   box-shadow: 0 0 5px rgba(64, 145, 108, 0.5);
 }
 
-/* Botón llamativo y moderno */
 button {
   background: linear-gradient(135deg, #2d6a4f, #40916c);
   color: white;
@@ -80,7 +74,6 @@ button:hover {
   box-shadow: 0 6px 15px rgba(64, 145, 108, 0.5);
 }
 
-/* Resultado destacado */
 #resultado {
   margin-top: 15px;
   font-size: 1.1em;
@@ -89,7 +82,6 @@ button:hover {
   color: #1b4332;
 }
 
-/* Tips con estilo de alerta amigable */
 .tip {
   margin-top: 12px;
   background-color: #e9f8f1;

@@ -9,16 +9,37 @@
 <body>
   <h1>Calculadora de Consumo de Energía</h1>
   <div class="card">
-    <label for="focos">Número de focos:</label>
-    <input type="number" id="focos" placeholder="Ejemplo: 5" min="0">
+    <p>Ingresa la cantidad, potencia y horas de uso de cada aparato:</p>
 
-    <label for="horas">Horas de uso al día:</label>
-    <input type="number" id="horas" placeholder="Ejemplo: 6" min="0">
+    <div class="appliance">
+      <label>Focos</label>
+      <input type="number" id="focos" placeholder="Cantidad" min="0">
+      <input type="number" id="focosPotencia" placeholder="Potencia (W)" min="0">
+      <input type="number" id="focosHoras" placeholder="Horas/día" min="0">
+    </div>
 
-    <label for="potencia">Potencia de cada foco (W):</label>
-    <input type="number" id="potencia" placeholder="Ejemplo: 10" min="0">
+    <div class="appliance">
+      <label>Televisores</label>
+      <input type="number" id="tvs" placeholder="Cantidad" min="0">
+      <input type="number" id="tvsPotencia" placeholder="Potencia (W)" min="0">
+      <input type="number" id="tvsHoras" placeholder="Horas/día" min="0">
+    </div>
 
-    <button onclick="calcular()">Calcular Consumo</button>
+    <div class="appliance">
+      <label>Refrigerador</label>
+      <input type="number" id="refri" placeholder="Cantidad" min="0">
+      <input type="number" id="refriPotencia" placeholder="Potencia (W)" min="0">
+      <input type="number" id="refriHoras" placeholder="Horas/día" min="0">
+    </div>
+
+    <div class="appliance">
+      <label>Microondas</label>
+      <input type="number" id="micro" placeholder="Cantidad" min="0">
+      <input type="number" id="microPotencia" placeholder="Potencia (W)" min="0">
+      <input type="number" id="microHoras" placeholder="Horas/día" min="0">
+    </div>
+
+    <button onclick="calcular()">Calcular Consumo Total</button>
 
     <div id="resultado"></div>
     <div id="tips"></div>
