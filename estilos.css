@@ -27,6 +27,14 @@ h1, h2 {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* 👇 Asegura que las gráficas se adapten a móvil */
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+  margin: 0 auto;
+}
+
 .appliance {
   margin-bottom: 1rem;
 }
@@ -66,4 +74,20 @@ button:hover {
   background-color: #e8f5e9;
   border-radius: 8px;
   font-size: 0.95rem;
+}
+
+/* 📱 Mejora en pantallas pequeñas */
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  .info-section, .calculator, .results {
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
 }
